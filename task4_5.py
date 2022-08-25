@@ -57,8 +57,8 @@ def roman_to_int(txt):
     # тут можно было использовать библиотеку roman, но решил так
     txt = txt.upper()
     result = 0
-    for arab, roman in CONV_TABLE:
-        while txt.startswith(roman):
-            result += arab
-            txt = txt[len(roman):]
+    for int_val, roman_val in CONV_TABLE:
+        while txt.startswith(roman_val):
+            result += int_val
+            txt = txt[len(roman_val):]
     return result
