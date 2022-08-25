@@ -16,6 +16,7 @@ from decorators import print_result
 @print_result
 def find_most_frequently_repeated_words(text: str):
     words = re.findall(r'\w+', text)
+    # upper возможно лишний, но решил что это подходит больше для логики функции
     cap_words = [word.upper() for word in words]
     word_counts = Counter(cap_words)
     max_value = max(word_counts.values())
